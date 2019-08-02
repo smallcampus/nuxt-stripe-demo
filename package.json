@@ -5,7 +5,7 @@
   "author": "Tin Mak",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "dev": "echo 'Please enter StripeClientId:'; read STRIPE_CLIENT_ID; cross-env NODE_ENV=development STRIPE_CLIENT_ID=$STRIPE_CLIENT_ID nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate"
